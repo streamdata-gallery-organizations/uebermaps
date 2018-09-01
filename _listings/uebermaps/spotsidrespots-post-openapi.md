@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: uebermaps
-x-complete: 1
+x-complete: 0
 info:
-  title: uebermaps
-  description: enable-people-to-store-spots-on-public-and-private-maps
+  title: uebermaps Respot a spot onto a map
+  description: Respot a spot onto a map.
   termsOfService: https://uebermaps.com/terms/
   contact:
     name: uebermaps API Team
@@ -961,126 +962,17 @@ paths:
       - Spot
       - Onto
       - Map
-  /subscriptions:
-    get:
-      summary: List subscriptions. Pass no parameters to get own subscriptions
-      description: List subscriptions.
-      operationId: subscriptions.get
-      x-api-path-slug: subscriptions-get
-      parameters:
-      - in: query
-        name: map_id
-        description: Id of map
-      - in: query
-        name: user_id
-        description: Id of user
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Subscriptions
-      - ""
-      - Pass
-      - "No"
-      - Parameters
-      - To
-      - Get
-      - Own
-      - Subscriptions
-    post:
-      summary: Create map subscription
-      description: Create map subscription.
-      operationId: subscriptions.post
-      x-api-path-slug: subscriptions-post
-      parameters:
-      - in: body
-        name: map_id
-        description: map id
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Map
-      - Subscription
-  /trends/latest:
-    get:
-      summary: List latest maps
-      description: List latest maps.
-      operationId: trends.latest.get
-      x-api-path-slug: trendslatest-get
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Latest
-      - Maps
-  /trends/recommended:
-    get:
-      summary: List recommended maps
-      description: List recommended maps.
-      operationId: trends.recommended.get
-      x-api-path-slug: trendsrecommended-get
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Recommended
-      - Maps
-  /users/search:
-    get:
-      summary: Search users
-      description: Search users
-      operationId: users.search.get
-      x-api-path-slug: userssearch-get
-      parameters:
-      - in: query
-        name: q
-        description: Query
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Search
-      - Users
-  /users/{id}:
-    get:
-      summary: Get user profile
-      description: Get profile a user
-      operationId: users.id.get
-      x-api-path-slug: usersid-get
-      parameters:
-      - in: path
-        name: id
-        description: Id of user
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - User
-      - Profile
-  /users/{user_id}/maps:
-    get:
-      summary: List maps for a given user
-      description: List maps for a given user.
-      operationId: users.user_id.maps.get
-      x-api-path-slug: usersuser-idmaps-get
-      parameters:
-      - in: path
-        name: user_id
-        description: Id of user
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Mapsa
-      - Given
-      - User
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

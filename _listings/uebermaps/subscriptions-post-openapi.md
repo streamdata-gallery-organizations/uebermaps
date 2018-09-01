@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: uebermaps
-x-complete: 1
+x-complete: 0
 info:
-  title: uebermaps
-  description: enable-people-to-store-spots-on-public-and-private-maps
+  title: uebermaps Create map subscription
+  description: Create map subscription.
   termsOfService: https://uebermaps.com/terms/
   contact:
     name: uebermaps API Team
@@ -1006,81 +1007,17 @@ paths:
       - Mapping
       - Map
       - Subscription
-  /trends/latest:
-    get:
-      summary: List latest maps
-      description: List latest maps.
-      operationId: trends.latest.get
-      x-api-path-slug: trendslatest-get
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Latest
-      - Maps
-  /trends/recommended:
-    get:
-      summary: List recommended maps
-      description: List recommended maps.
-      operationId: trends.recommended.get
-      x-api-path-slug: trendsrecommended-get
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Recommended
-      - Maps
-  /users/search:
-    get:
-      summary: Search users
-      description: Search users
-      operationId: users.search.get
-      x-api-path-slug: userssearch-get
-      parameters:
-      - in: query
-        name: q
-        description: Query
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Search
-      - Users
-  /users/{id}:
-    get:
-      summary: Get user profile
-      description: Get profile a user
-      operationId: users.id.get
-      x-api-path-slug: usersid-get
-      parameters:
-      - in: path
-        name: id
-        description: Id of user
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - User
-      - Profile
-  /users/{user_id}/maps:
-    get:
-      summary: List maps for a given user
-      description: List maps for a given user.
-      operationId: users.user_id.maps.get
-      x-api-path-slug: usersuser-idmaps-get
-      parameters:
-      - in: path
-        name: user_id
-        description: Id of user
-      responses:
-        200:
-          description: OK
-      tags:
-      - Mapping
-      - Mapsa
-      - Given
-      - User
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
